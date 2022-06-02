@@ -15,5 +15,10 @@ export default {
       this.socket.emit("user-connected");
     }
   },
+  mounted() { 
+    this.$nextTick(() => {
+      this.socket.on('accepted', () => console.log(true))
+    })
+  }
 }
 </script>
