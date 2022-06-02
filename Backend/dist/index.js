@@ -17,10 +17,6 @@ const io = new socket_io_1.Server(server, {
         credentials: true
     }
 });
-app.get("/", (req, res) => {
-    console.log('hello world');
-    res.send('hello world');
-});
 io.on("connection", (socket) => {
     socket.on('user-connected', (arg, callback) => {
         socket.emit('accepted');

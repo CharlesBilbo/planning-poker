@@ -1,7 +1,25 @@
 <template>
-  <button @click="sendWeb">
-    <h1> send to webhook</h1>
-  </button>
+<div class="flex h-screen">
+  <div class="m-auto">
+    <div>
+      <div data-player-position="top" class="grid grid-cols-5 justify-items-center">
+        <div class="card"></div>
+        <div class="card"></div>
+        <div class="card"></div>
+        <div class="card"></div>
+        <div class="card"></div>
+      </div>
+      <div class="table m-5"></div>
+      <div data-player-position="bottom" class="h-28 grid grid-cols-5 justify-items-center">
+          <div class="card"></div>
+          <div class="card"></div>
+          <div class="card"></div>
+          <div class="card"></div>
+          <div class="card"></div>
+      </div>
+    </div>
+  </div>
+</div>
 </template>
 
 <script>
@@ -22,3 +40,17 @@ export default {
   }
 }
 </script>
+<style scoped>
+ .table { 
+  width:28rem;
+  height:8rem;
+  background-color: cyan; 
+  border-radius: 2.4rem;
+ }
+ .card { 
+   background-color:blue;
+   width: 50px;
+   height: 75px;
+   border-radius: 15%;
+ }
+</style>
