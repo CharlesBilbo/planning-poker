@@ -9,7 +9,9 @@
         <div class="card"></div>
         <div class="card"></div>
       </div>
-      <div class="table m-5"></div>
+      <div class="card-table m-5 flex">
+        <div class="m-auto reveal align-middle font-extrabold"> Reveal Cards</div>
+      </div>
       <div data-player-position="bottom" class="h-28 grid grid-cols-5 justify-items-center">
           <div class="card"></div>
           <div class="card"></div>
@@ -41,16 +43,24 @@ export default {
 }
 </script>
 <style scoped>
- .table { 
+ .card-table { 
   width:28rem;
   height:8rem;
-  background-color: cyan; 
+  background-color: #D99AC5; 
   border-radius: 2.4rem;
  }
  .card { 
-   background-color:blue;
+   background-color:#14BDEB;
    width: 50px;
    height: 75px;
    border-radius: 15%;
+ }
+
+ .reveal { 
+   color: black;
+   font-weight: bold;
+   padding: 5px;
+   border-radius: .5rem;
+   font-size: x-large;
  }
 </style>
