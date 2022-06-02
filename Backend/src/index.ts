@@ -24,7 +24,7 @@ app.get( "/", ( req, res ) => {
 
 io.on("connection", (socket) => {
     socket.on('user-connected', (arg, callback) => {
-        console.log('new user connected')
+        socket.emit('accepted')
     })
 });
 
