@@ -1,5 +1,19 @@
 <template>
-  <h1 class="text-3xl font-bold underline">
-    Hello world!
-  </h1>
+  <button @click="sendWeb">
+    <h1> send to webhook</h1>
+  </button>
 </template>
+
+<script>
+import { io } from 'socket.io-client';
+export default {
+  data:() => ({
+    socket: io('http://localhost:8080')
+  }),
+  methods: {
+    sendWeb() {
+      this.socket.emit("user-connected");
+    }
+  },
+}
+</script>
