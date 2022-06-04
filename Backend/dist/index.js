@@ -17,9 +17,12 @@ const io = new socket_io_1.Server(server, {
         credentials: true
     }
 });
+const players = [];
 io.on("connection", (socket) => {
-    socket.on('user-connected', (arg, callback) => {
-        socket.emit('accepted');
+    socket.on('new-player-connected', (data) => {
+        socket.emit('new-player', {
+            'name': data.name
+        });
     });
 });
 server.listen(8080, () => console.log('listening on 8080'));

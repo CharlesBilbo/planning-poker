@@ -17,9 +17,13 @@ const io = new Server(server, {
     }
 });
 
+const players = [];
+
 io.on("connection", (socket) => {
-    socket.on('user-connected', (arg, callback) => {
-        socket.emit('accepted')
+    socket.on('new-player-connected', (data) => {
+        socket.emit('new-player', {
+            'name': data.name
+        })
     })
 });
 
